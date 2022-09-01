@@ -1,0 +1,97 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+html {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dblue);
+    color: var(--lightcyan);
+    font-size: 28px;
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.5;
+}
+button, .button {
+    background-color: var(--neongreen);
+    border-radius: 50px;
+    border: none;
+    padding: 15px;
+}
+:root {
+    --lightcyan: hsl(193, 38%, 86%);
+    --neongreen: hsl(150, 100%, 66%);
+    --gblue: hsl(217, 19%, 38%);
+    --dgblue: hsl(217, 19%, 24%);
+    --dblue: hsl(218, 23%, 16%);
+}
+/** Classes */
+.container {
+    max-width: 445px;
+    margin: 0 auto;
+}
+.padding-all {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 115px;
+    padding-bottom: 190px;
+}
+/** Advice */
+.advice-wrapper {
+    background-color: var(--dgblue);
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+    .advice-id {
+
+    }
+        .advice-id h3 {
+            color: var(--neongreen);
+            font-size: 10px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    .advice-content {
+
+    }
+        .advice-content p {
+            text-align: center;
+        }
+    .advice-wrapper .advice-pattern {
+        background-image: url('images/pattern-divider-mobile.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 16px;
+        margin-bottom: 20px;
+    }
+    @media (min-width: 47rem) {
+        .advice-wrapper .advice-pattern {
+            background-image: url('images/pattern-divider-desktop.svg');
+        }
+    }
+    @media (min-width: 67rem) {
+        .advice-wrapper .advice-pattern {
+            background-image: url('images/pattern-divider-desktop.svg');
+        }
+    }
+    .advice-button {
+        position: absolute;
+        left: 41%;
+    }
+    @media (min-width: 47rem) {
+        .advice-button {
+            position: absolute;
+            left: 44%;
+        }
+        .advice-button button:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 13px 0px var(--neongreen);
+        }
+    }
+    @media (min-width: 67rem) {
+        .advice-button {
+            left: 44%;
+        }
+    }
